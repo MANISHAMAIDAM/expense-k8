@@ -111,13 +111,13 @@ spec:
       project: expense
       tier: web
   # pod definition
-    template:
-     metadata:
+  template:
+    metadata:
       labels:
         component: frontend
         project: expense
         tier: web
-     spec:
+    spec:
       containers:
       - name: frontend
         image: manishanu/frontend:v1.0
@@ -136,7 +136,6 @@ spec:
           items:
           - key: nginx.conf
             path: nginx.conf
-
 ---
 apiVersion: v1
 kind: Service
