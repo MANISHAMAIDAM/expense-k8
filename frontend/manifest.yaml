@@ -111,7 +111,7 @@ spec:
       project: expense
       tier: web
   # pod definition
-  template:
+    template:
     metadata:
       labels:
         component: frontend
@@ -120,8 +120,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: manishanu/frontend:v1.0 
-      volumeMounts:
+        image: manishanu/frontend:v1.0
+        volumeMounts:
         - name: nginx-conf
           mountPath: /etc/nginx/nginx.conf
           subPath: nginx.conf
@@ -136,6 +136,7 @@ spec:
           items:
           - key: nginx.conf
             path: nginx.conf
+
 ---
 apiVersion: v1
 kind: Service
