@@ -112,12 +112,12 @@ spec:
       tier: web
   # pod definition
     template:
-    metadata:
+     metadata:
       labels:
         component: frontend
         project: expense
         tier: web
-    spec:
+     spec:
       containers:
       - name: frontend
         image: manishanu/frontend:v1.0
